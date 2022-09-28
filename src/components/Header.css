@@ -1,0 +1,83 @@
+header {
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  background-color: white;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+}
+
+header .log {
+  display: flex;
+  align-items: center;
+}
+
+.log div {
+  padding: 0 10px;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+.links a {
+  text-decoration: none;
+}
+.menu li a {
+  text-decoration: none;
+  padding: 0px 10px;
+}
+
+.menu,
+.log-text,
+.menu li a,
+.links a {
+  color: rgb(122, 68, 149);
+  font-weight: bold;
+}
+
+.log-text {
+  text-align: center;
+}
+
+header button {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  background-color: rgb(122, 68, 149);
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  .menu,
+  .log {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu li,
+  .log .log-text {
+    padding-bottom: 10px;
+  }
+
+  header {
+    height: 160px;
+  }
+
+  ul.menu {
+    padding: 0 0 0 10px;
+  }
+}

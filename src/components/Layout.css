@@ -1,0 +1,17 @@
+.layout {
+  margin: 0;
+  height: calc(100vh - 80px);
+  margin-top: 60px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(252, 226, 219);
+}
+
+@media (max-width: 800px) {
+  .layout {
+    margin-top: 150px;
+    height: calc(100vh - 170px);
+  }
+}

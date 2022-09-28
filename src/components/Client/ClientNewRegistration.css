@@ -1,0 +1,37 @@
+.form-wrapper {
+  /* background-color: white; */
+  margin: 0;
+  padding: 0px 2rem 2rem 2rem;
+  max-height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.table {
+  text-align: left;
+  position: relative;
+  border-collapse: collapse;
+}
+
+.table td {
+  padding: 3px 14px;
+}
+
+.table thead th {
+  background: rgb(122, 68, 149);
+  color: white;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+@media (max-width: 800px) {
+  .form-wrapper {
+    max-height: 70vh;
+    padding: 0px 0.5rem 2rem 0.5rem;
+  }
+
+  .table td {
+    padding: 3px 6px;
+  }
+}

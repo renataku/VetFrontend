@@ -1,0 +1,19 @@
+.form-pet-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 80vh;
+}
+
+.form-pet {
+  margin: 10px;
+}
+
+.client {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.name {
+  color: rgb(122, 68, 149);
+  font-weight: bold;
+}

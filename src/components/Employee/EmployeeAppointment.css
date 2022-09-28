@@ -1,0 +1,16 @@
+.forms-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+
+.forms-wrapper .form {
+  margin: 10px;
+}
+
+.history {
+  padding-bottom: 30px;
+  padding-right: 10px;
+  max-height: 400px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
