@@ -1,0 +1,64 @@
+1. prisijungti kaip adminui:
+    employee login (email: admin@admin.admin, psw:admin).
+
+2. pridėti gydytojų darbo grafikus (http://localhost:3000/schedule).
+    Bent vieną grafiką šiai dienai. Neleidžia pridėti, jei mėgini pridėti tą pati laiką tam pačiam gydytojui.
+    Dėliojant grafikus atkreipti dėmesį kurio vet'o koks mailas - tolesniam testavimui pravers.
+
+
+    Dar adminas gali:
+    -pridėti darbuotoją (Add new employee),
+    -peržiūrėti visus darbuotojus (all employees)
+        veikia filtravimas pagal vardą ir rolę
+        galimybė pataisyti darbuotijo duomenis. 
+        Čia adminas gali pakeisti savo rolę į vet ir nebeteks teisės nieko daugiau keisti. Taip jam ir reika.
+        galimybė ištrinti (neleidžia, jei bandai ištrinti save)
+
+3. atsijungti (mygtukas Log out viršuje dešinėje) adminui.
+
+4. prisijungti kaip klientas:
+    client login (email: client@client.client, psw: client).
+    galima jungtis ir kito kliento accountu, tik iš duombazės reikia pasižiūrėti, kokie mailai susigeneravo. slaptažodis bus "password".
+
+    klientas atsiduria: http://localhost:3000/client-new-registration
+    jam rodomos galimos laisvos, kitų neužimtos registracijos nuo prisijungimo laiko. Registracijos, kurios laisvos, bet laikas jau praėjęs - neberodomos.
+    yra galimybė filtruotis pagal veterinarą
+
+5. užsiregistruoti kelis laikus pas tą patį vet (toliesniam testavimui). galima ir dar pas kitą kelis laikus, bet nebūtina.
+    užsiregistravus klientui išsiunčiamas laiškas su info apie užsiregistravimą (mailhog). 
+    My Registrations galima matyti visas registracijas. Galima atsisakyti registracijos.
+
+6. išsiloginti ir prisiloginti kaip veterinarui, kuris turės registracijų:
+    email: vet1@vet.vet psw: vet1vet
+    email: vet2@vet.vet psw: vet2vet
+    email: vet3@vet.vet psw: vet3vet
+
+7.  "My Clients Today" rodo šios dienos to vet'o neuždarytus appointmentus.
+    Show info - info apie klientą.
+    pasirinkus gyvūną ir paspaudus "Submit/show history" - History langelyje atsiras gydymo istorija, jei gyvūnas ne pirmą kartą šioje klinikoje
+    visiems gyvūnams čia gausis pirmas vizitas, 
+        -todėl reikėtų užpildyti description, 
+        -pasirinkti "closed case",  
+        -spausti "Submit/show history",
+        -spausti X viršuje dešinėje prie kliento vardo
+        -matysis kiti registruoti klientai "open case"
+            norint matyti apskritai visus šio vet'o klientus - eiti į "My Clients (all)"
+        -galima pasirinkti kitą to pačio kliento registraciją ir pasirinkus tą patį gyvūną, 
+        paspaudus "Submit/show history" jau matysis History informacoją.
+
+    Dar prie Show info galima:
+        - pridėti naują  gyvūną.
+        - peržiūrėti visus to kliento gyvūnus
+            peržiūrint galima:
+                - Edit - pakeisti gyvūno info
+                - Delete - ištrinti gyvūną. 
+                    (čia susimoviau kažkiek, 
+                    nepavyksta ištrinti iš karto kelių gyvūnų, 
+                    antro netrina, reikia grįžti su return atgal, 
+                    tada vėl pirmyn, tada ištrina).
+                    jei apie gyvūną jau įrašyta kokia nors info, jo neturi ištrinti. 
+                    Ir neištrina.
+                    Šitoje vietoje reikėtų padaryti dar vieną požymį Active/Inactive kiekvienam gyvūnui, kad neberodytų daugiau, bet liktų info apie jo gydymą.    
+    
+
+    Galima užsiregistruoti kaip visiškai naujam klientui, tai kai esi neprisijungęs "Client registration".
