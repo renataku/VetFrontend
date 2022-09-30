@@ -7,7 +7,7 @@ const addrUpd = "http://127.0.0.1/api/employee/update/";
 const addrRole = "http://127.0.0.1/api/roles";
 
 const EmployeeEdit = () => {
-  const { token } = useContext(userContext);
+  const { id, token } = useContext(userContext);
   const [error, setError] = useState("");
   const [rolesList, setRolesList] = useState("");
   const [message, setMessage] = useState([]);
@@ -140,6 +140,7 @@ const EmployeeEdit = () => {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
+  console.log("id: ", id, "params.employeeId", params.employeeId);
 
   return (
     <div className="form">
@@ -150,7 +151,7 @@ const EmployeeEdit = () => {
         <select
           name="role_id"
           value={values["role_id"]}
-          onChange={onChange}
+          onChange={params.employeeId != id ? onChange : null}
           required
         >
           <option value="">--Please choose role--</option>

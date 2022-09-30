@@ -11,7 +11,7 @@
     -peržiūrėti visus darbuotojus (all employees)
         veikia filtravimas pagal vardą ir rolę
         galimybė pataisyti darbuotijo duomenis. 
-        Čia adminas gali pakeisti savo rolę į vet ir nebeteks teisės nieko daugiau keisti. Taip jam ir reika.
+        Jei adminas bando pakeisti savo rolę rolę į vet - vis tiek grąžina prie admin
         galimybė ištrinti (neleidžia, jei bandai ištrinti save)
 
 3. atsijungti (mygtukas Log out viršuje dešinėje) adminui.
