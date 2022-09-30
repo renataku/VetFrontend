@@ -140,7 +140,6 @@ const EmployeeEdit = () => {
   const onChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-  console.log("id: ", id, "params.employeeId", params.employeeId);
 
   return (
     <div className="form">
