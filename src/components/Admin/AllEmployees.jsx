@@ -102,6 +102,7 @@ const AllEmployees = () => {
                 )
                 .map((item, index) => (
                   <Employee
+                    key={index}
                     item={item}
                     index={index}
                     deleteEmployee={deleteEmployee}

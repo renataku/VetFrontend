@@ -150,7 +150,13 @@ const EmployeeEdit = () => {
         <select
           name="role_id"
           value={values["role_id"]}
-          onChange={params.employeeId != id ? onChange : null}
+          onChange={
+            params.employeeId != id
+              ? onChange
+              : () => {
+                  return;
+                }
+          }
           required
         >
           <option value="">--Please choose role--</option>
